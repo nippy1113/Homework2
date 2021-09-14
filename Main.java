@@ -49,7 +49,11 @@ public class Main {
             }
 
             for (String word : wordCount.keySet()) {
-                System.out.println(word + " " + wordCount.get(word));
+                int wordAmount = wordCount.get(word);
+                System.out.print(word + " " + wordCount.get(word) + " ");
+                System.out.format("%.2f", (double) 100 * wordAmount / totalWordsAmount);
+                System.out.println("% ");
+
             }
 
             Collection<String> collection = wordCount.keySet();
@@ -57,8 +61,10 @@ public class Main {
                 int wordAmount = wordCount.get(word);
                 if (word != null) {
                     if (mostPopularWordAmount == wordAmount) {
-                        System.out.println("The most popular word: "
-                                + word + " " + (double) 100 * wordAmount / totalWordsAmount + "%");
+                        System.out.print("The most popular word: "
+                                + word + " ");
+                        System.out.format("%.2f", (double) 100 * wordAmount / totalWordsAmount);
+                        System.out.println("%");
                     }
                 }
             }
