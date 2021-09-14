@@ -52,7 +52,8 @@ public class Main {
                 int wordAmount = wordCount.get(word);
                 System.out.print(word + " " + wordCount.get(word) + " ");
                 System.out.format("%.2f", (double) 100 * wordAmount / totalWordsAmount);
-                System.out.println("%");
+                System.out.println("% ");
+
             }
 
             Collection<String> collection = wordCount.keySet();
