@@ -7,7 +7,7 @@ import java.util.TreeMap;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        WordCounter(FileReaderMethod("src\\textFile.txt"));
+        WordCounter(FileReaderMethod("textFile.txt"));
     }
 
 
