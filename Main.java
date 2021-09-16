@@ -7,13 +7,14 @@ import java.util.TreeMap;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        WordCounter(FileReaderMethod("src/textFile.txt"));
+        WordCounter(FileReaderMethod("src\\textFile.txt"));
     }
 
 
     public static String FileReaderMethod(String file) throws IOException {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(file));
+            Path path = Paths.get(file);
+            BufferedReader reader = new BufferedReader(new FileReader(path.toAbsolutePath().toString()));
             String line = null;
             StringBuilder stringBuilder = new StringBuilder();
             String lineSeparator = System.getProperty("line.separator");
